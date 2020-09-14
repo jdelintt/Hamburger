@@ -1,0 +1,22 @@
+{
+  "name": "hamburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdelintt/Hamburger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdelintt/Hamburger/issues"
+  },
+  "homepage": "https://github.com/jdelintt/Hamburger#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
