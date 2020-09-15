@@ -1,12 +1,39 @@
 <div class="ui container">
     <div class="ui grid">
         <div class="sixteen wide column">
-            <h1>Eat the Burger</h1>
+            <h1>Enter a new burger</h1>
 
             <div class="ui icon input">
                 <input type="text" placeholder="Search...">
                 <i class="inverted circular search link icon"></i>
             </div>
         </div>
+
+        <div class="sixteen wide column"></div>
+        <div class="sixteen wide column"></div>
+        <div class="sixteen wide column"></div>
+        <div class="sixteen wide column"></div>
+
+        {{!-- Put the burgers here --}}
+        <div class="eight wide column">
+            <ul>
+                {{#each burgers}}
+
+                {{#unless devoured}}
+                <span><strong>
+                        {{this.id}} - {{this.burger_name}}
+                    </strong></span>
+
+                {{/unless}}
+                {{/each}}
+            </ul>
+
+        </div>
+        {{!-- Put the eaten burgers here --}}
+        <div class="eight wide column">
+
+
+        </div>
+
     </div>
 </div>
