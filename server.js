@@ -9,9 +9,9 @@ app.use(express.static("public"));
 
 var exphbs = require("express-handlebars");
 
-app.get("/", function (req, res) {
-  res.json(path.join(__dirname, "public/index.html"));
-});
+// app.get("/", function (req, res) {
+//   res.json(path.join(__dirname, "public/index.html"));
+// });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
