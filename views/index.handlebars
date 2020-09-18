@@ -4,8 +4,8 @@
             <h1>Enter a new burger</h1>
 
             <div class="ui icon input">
-                <input type="text" placeholder="Search...">
-                <i class="inverted circular search link icon"></i>
+                <input type="text" id="newburger" placeholder="Search...">
+                <i class="inverted circular search link icon create-form"></i>
             </div>
         </div>
 
@@ -24,6 +24,12 @@
                         {{this.id}} - {{this.burger_name}}
                     </strong></span>
 
+                <button class="circular ui icon button eatburger" id="eatbutton" data-id="{{this.id}}"
+                    data-newDevoured="{{devour}}">
+                    <i class="gulp icon"></i>
+                </button>
+
+
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -31,6 +37,22 @@
         </div>
         {{!-- Put the eaten burgers here --}}
         <div class="eight wide column">
+
+            {{#each burgers}}
+
+            {{#if devoured}}
+            <span><strong>
+                    {{this.id}} - {{this.burger_name}}
+                </strong></span>
+
+            <button class="circular ui icon button eatburger" id="eatbutton" data-id="{{this.id}}"
+                data-newDevoured="{{devour}}"><span class="fa fa-usd"></span>
+                <i class="gulp icon"></i>
+            </button>
+
+
+            {{/if}}
+            {{/each}}
 
 
         </div>

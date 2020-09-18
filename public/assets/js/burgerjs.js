@@ -1,7 +1,6 @@
-const { urlencoded } = require("express");
-
 $(function () {
-  $(".create-form").on("submit", function (event) {
+  $(".create-form").on("click", function (event) {
+    console.log("I'm Happpy");
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
@@ -37,7 +36,7 @@ $(function () {
       location.reload();
     });
   });
-  $(".deleteburder").on("click", function (event) {
+  $(".deleteburger").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
 
