@@ -19,6 +19,6 @@ app.set("view engine", "handlebars");
 
 app.use(routes);
 
-app.listen(PORT, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Sever listening on PORT" + PORT);
 });
