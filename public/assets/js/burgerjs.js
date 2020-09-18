@@ -27,7 +27,7 @@ $(function () {
     var devouredBurger = {
       devoured: 1,
     };
-    $.ajax("/api/burgers" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: devouredBurger,
     }).then(function () {
@@ -36,15 +36,13 @@ $(function () {
       location.reload();
     });
   });
-  $(".deleteburger").on("click", function (event) {
+  $("#deleteburger").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
 
     $.ajax({
-      type: "DELTE",
+      type: "DELETE",
       url: "/api/burgers/" + id,
-    }).then(function () {
-      console.log("Burger done for!");
-    });
+    }).then(location.reload());
   });
 });
