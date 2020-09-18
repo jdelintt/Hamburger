@@ -20,18 +20,18 @@ $(function () {
     });
   });
 
-  $(".eatburger").on("click", function (event) {
+  $("#eatbutton").on("click", function (event) {
     event.preventDefault();
 
     var id = $(this).data("id");
     var devouredBurger = {
       devoured: 1,
     };
-    $.ajax("/api/burgers", {
+    $.ajax("/api/burgers" + id, {
       type: "PUT",
       data: devouredBurger,
     }).then(function () {
-      console.log("created new burger");
+      console.log("Burger was eaten!");
       // Reload the page to get the updated list
       location.reload();
     });
@@ -44,8 +44,7 @@ $(function () {
       type: "DELTE",
       url: "/api/burgers/" + id,
     }).then(function () {
-      console.log("Burger eaten!");
-      location.reload();
+      console.log("Burger done for!");
     });
   });
 });
