@@ -9,6 +9,10 @@ app.use(express.static("public"));
 
 var exphbs = require("express-handlebars");
 
+app.get("/", function (req, res) {
+  res.json(path.join(__dirname, "public/index.html"));
+});
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -19,6 +23,6 @@ app.set("view engine", "handlebars");
 
 app.use(routes);
 
-app.listen(process.env.PORT || 3000, function () {
+app.listen(PORT, function () {
   console.log("Sever listening on PORT" + PORT);
 });
